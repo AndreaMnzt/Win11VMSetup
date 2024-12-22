@@ -11,7 +11,7 @@ reg add HKEY_LOCAL_MACHINE\SYSTEM\Setup\LabConfig /v BypassSecureBootCheck /f /t
 reg add HKEY_LOCAL_MACHINE\SYSTEM\Setup\MoSetup /v AllowUpgradesWithUnsupportedTPMOrCPU /f /t REG_DWORD /d 00000001
 ```
 ## During Windows Setup: Fn+Shift+F10
-NOTE: Execute the following commands one at a time."
+NOTE: Execute the following commands one at a time.
 ```
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v LaunchUserOOBE /f
 net user /add TestUser *
