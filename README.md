@@ -15,6 +15,10 @@ NOTE: Execute the following commands one at a time.
 ```
 reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v LaunchUserOOBE /f
 net user /add TestUser *
+```
+Input and confirm the password.
+
+```
 net localgroup Administrators TestUser /add
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon" /v AutoAdminLogon /t REG_SZ /d 0 /f
 reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v EnableFirstLogonAnimation /t REG_DWORD /d 0 /f
